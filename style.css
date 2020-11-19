@@ -1,0 +1,290 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: url("c1.png"), pointer;
+	
+}
+
+
+
+html{
+	font-size: 10px;
+	font-family: "Roboto Cn", sans-serif;
+	scroll-behavior: smooth;
+	background: #000;
+	
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+	background: linear-gradient(transparent,#FF0000);
+	border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background: linear-gradient(transparent,#0066ff);
+
+}
+
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+header{
+
+	background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(61,1,1,0));
+
+}
+
+.container{
+
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu-toggle{
+	position: fixed;
+
+	color: #eeeeee;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.brand{
+	font-size: 2.5rem;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: crimson;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.menu-toggle{
+		display: block;
+	}
+
+
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 2rem;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.brand{
+		font-size: 1rem;
+	}
+  
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+  
+}
+
+.box1{
+    height:100vh;
+    width: 100%;
+    background-image: url(w1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: table;
+	background-attachment: fixed;
+	
+}
+
+.box2{
+    height:100vh;
+    width: 100%;
+    background-image: url(w5.png);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+
+}
+
+.box4{
+    height:100vh;
+    width: 100%;
+    background-image: url(w3.jpg);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+
+}
+
+.box3{
+    height:100vh;
+    width: 100%;
+    background-image: url(w2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+
+}
+
+.video{
+	height:100vh;
+    width: 100%;
+    background-image: url(w4.jpg);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+
+
+h5{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #ffff;
+    margin: 0px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+footer{
+
+	bottom: 0;
+	left: 0;
+	right:0;
+	background: #1111;
+	height: auto;
+	width: 100%vw;
+	font-family: "Open Sans";
+	padding-top: 10px;
+	color: #fff;
+
+}
+
+
+.footer-bottom{
+	background: #000;
+	width: 100%vw;
+	padding: 20px 0;
+	text-align: center;
+
+}
+
+.footer-bottom p{
+	font-size: 14;
+	word-spacing:2px;
+	text-transform: capitalize;
+}
+
+.footer-bottom span{
+	text-transform: uppercase;
+	opacity: .4;
+	font-weight: 200;
+
+}
+
